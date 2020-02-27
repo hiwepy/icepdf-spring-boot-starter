@@ -1,2 +1,2 @@
-# icepdf-spring-boot-starter
-icepdf-spring-boot-starter
+# pdfbox-spring-boot-starter
+pdfbox-spring-boot-starter
