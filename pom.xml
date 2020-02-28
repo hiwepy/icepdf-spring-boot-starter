@@ -366,11 +366,18 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<batik.version>1.12</batik.version>
+		<bcprov.version>1.64</bcprov.version>
+		<bcpkix.version>${bcprov.version}</bcpkix.version>
+		<commons-imaging.version>1.0-alpha1</commons-imaging.version>
+		<commons-io.version>2.6</commons-io.version>
+		<commons-lang3.version>3.9</commons-lang3.version>
 		<cssparser.version>0.9.27</cssparser.version>
 		<jsoup.version>1.12.2</jsoup.version>
  		<junit.version>4.12</junit.version>
  		<htmlparser.version>1.4</htmlparser.version>
-		<icepdf.version>5.0.4</icepdf.version>
+		<icepdf.version>6.3.2</icepdf.version> <!-- 6.3.2、5.0.4 -->
+		<jbig2-imageio.version>3.0.3</jbig2-imageio.version> 
+		<imageio.version>3.5</imageio.version>
 		<phloc-commons.version>4.6.5</phloc-commons.version>
 		<phloc-html.version>4.4.7</phloc-html.version>
 		<phloc-css.version>3.8.0</phloc-css.version>
@@ -386,6 +393,75 @@
 	
 	<dependencyManagement>
 		<dependencies>
+			
+			<!-- Commons-IO contains utility classes, stream implementations, file 
+				filters, and endian classes. -->
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>${commons-io.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+			<dependency>
+			    <groupId>org.apache.commons</groupId>
+			    <artifactId>commons-lang3</artifactId>
+			    <version>${commons-lang3.version}</version>
+			</dependency>
+			
+			<!-- https://mvnrepository.com/artifact/com.twelvemonkeys.common/common-image -->
+			<!-- The TwelveMonkeys Common Image support  -->
+			<dependency>
+			    <groupId>com.twelvemonkeys.common</groupId>
+			    <artifactId>common-image</artifactId>
+			    <version>${imageio.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/jbig2-imageio -->
+			<dependency>
+			    <groupId>org.apache.pdfbox</groupId>
+			    <artifactId>jbig2-imageio</artifactId>
+			    <version>${jbig2-imageio.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/com.twelvemonkeys.imageio/imageio-core -->
+			<!-- TwelveMonkeys :: ImageIO :: Core  -->
+			<dependency>
+			    <groupId>com.twelvemonkeys.imageio</groupId>
+			    <artifactId>imageio-core</artifactId>
+			    <version>${imageio.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/com.twelvemonkeys.imageio/imageio-metadata -->
+			<!-- ImageIO metadata module.  -->
+			<dependency>
+			    <groupId>com.twelvemonkeys.imageio</groupId>
+			    <artifactId>imageio-metadata</artifactId>
+			    <version>${imageio.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/com.twelvemonkeys.imageio/imageio-tiff -->
+			<!-- ImageIO plugin for Aldus/Adobe Tagged Image File Format (TIFF).  -->
+			<dependency>
+			    <groupId>com.twelvemonkeys.imageio</groupId>
+			    <artifactId>imageio-tiff</artifactId>
+			    <version>${imageio.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on -->
+			<dependency>
+			    <groupId>org.bouncycastle</groupId>
+			    <artifactId>bcprov-jdk15on</artifactId>
+			    <version>${bcprov.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-ext-jdk15on -->
+			<dependency>
+			    <groupId>org.bouncycastle</groupId>
+			    <artifactId>bcprov-ext-jdk15on</artifactId>
+			    <version>${bcprov.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcpkix-jdk15on -->
+			<dependency>
+			    <groupId>org.bouncycastle</groupId>
+			    <artifactId>bcpkix-jdk15on</artifactId>
+			    <version>${bcpkix.version}</version>
+			</dependency>
+									
+						
 			<!-- ######################org.apache.xmlgraphics ###################### -->
 			
 			<!-- Batik是使用svg格式图片来实现各种功能的应用程序以及Applet提供的一个基于java的工具包。 -->
@@ -538,6 +614,7 @@
 				<artifactId>phloc-css</artifactId>
 				<version>${phloc-css.version}</version>
 			</dependency>
+						
 		</dependencies>
 	</dependencyManagement>
 
@@ -588,49 +665,128 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-autoconfigure</artifactId>
 		</dependency>
-
+		
+		<!-- Commons-IO contains utility classes, stream implementations, file 
+			filters, and endian classes. -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+		</dependency>
+		
+		<!-- The TwelveMonkeys Common Image support  -->
+		<dependency>
+		    <groupId>com.twelvemonkeys.common</groupId>
+		    <artifactId>common-image</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.pdfbox</groupId>
+		    <artifactId>jbig2-imageio</artifactId>
+		</dependency>
+		<!-- TwelveMonkeys :: ImageIO :: Core  -->
+		<dependency>
+		    <groupId>com.twelvemonkeys.imageio</groupId>
+		    <artifactId>imageio-core</artifactId>
+		</dependency>
+		<!-- ImageIO metadata module.  -->
+		<dependency>
+		    <groupId>com.twelvemonkeys.imageio</groupId>
+		    <artifactId>imageio-metadata</artifactId>
+		</dependency>
+		<!-- ImageIO plugin for Aldus/Adobe Tagged Image File Format (TIFF).  -->
+		<dependency>
+		    <groupId>com.twelvemonkeys.imageio</groupId>
+		    <artifactId>imageio-tiff</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.bouncycastle</groupId>
+		    <artifactId>bcprov-jdk15on</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.bouncycastle</groupId>
+		    <artifactId>bcprov-ext-jdk15on</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.bouncycastle</groupId>
+		    <artifactId>bcpkix-jdk15on</artifactId>
+		</dependency>
+					
+		<!-- icepdf 6.3.2 -->
 		<dependency>
 			<groupId>org.icepdf.pdf</groupId>
 			<artifactId>icepdf-core</artifactId>
 			<version>${icepdf.version}</version>
+			<!-- <scope>system</scope>
+			<systemPath>${basedir}/libs/6.3.2/icepdf-core-6.3.2.jar</systemPath> -->
+		</dependency>	
+		<dependency>
+			<groupId>org.icepdf.pdf</groupId>
+			<artifactId>icepdf-viewer</artifactId>
+			<version>${icepdf.version}</version>
+			<!-- <scope>system</scope>
+			<systemPath>${basedir}/libs/6.3.2/icepdf-viewer-6.3.2.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.icepdf.pdf</groupId>
+			<artifactId>icepdf-pro</artifactId>
+			<version>${icepdf.version}</version>
+			<!-- <scope>system</scope>
+			<systemPath>${basedir}/libs/6.3.2/icepdf-pro-6.3.2.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.icepdf.pdf</groupId>
+			<artifactId>icepdf-pro-intl</artifactId>
+			<version>${icepdf.version}</version>
+			<!-- <scope>system</scope>
+			<systemPath>${basedir}/libs/6.3.2/icepdf-pro-intl-6.3.2.jar</systemPath> -->
+		</dependency> 
+		
+		<!-- icepdf 5.0.4 -->
+		<!-- <dependency>
+			<groupId>org.icepdf.pdf</groupId>
+			<artifactId>icepdf-core</artifactId>
+			<version>${icepdf.version}</version>
 			<scope>system</scope>
-			<systemPath>${basedir}/libs/icepdf-core.jar</systemPath>
+			<systemPath>${basedir}/libs/5.0.4/icepdf-core.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>org.icepdf.pdf</groupId>
 			<artifactId>icepdf-extra</artifactId>
 			<version>${icepdf.version}</version>
 			<scope>system</scope>
-			<systemPath>${basedir}/libs/icepdf-extra.jar</systemPath>
+			<systemPath>${basedir}/libs/5.0.4/icepdf-extra.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>org.icepdf.pdf</groupId>
 			<artifactId>icepdf-pro-intl</artifactId>
 			<version>${icepdf.version}</version>
 			<scope>system</scope>
-			<systemPath>${basedir}/libs/icepdf-pro-intl.jar</systemPath>
+			<systemPath>${basedir}/libs/5.0.4/icepdf-pro-intl.jar</systemPath>
 		</dependency> 
 		<dependency>
 			<groupId>org.icepdf.pdf</groupId>
 			<artifactId>icepdf-pro</artifactId>
 			<version>${icepdf.version}</version>
 			<scope>system</scope>
-			<systemPath>${basedir}/libs/icepdf-pro.jar</systemPath>
+			<systemPath>${basedir}/libs/5.0.4/icepdf-pro.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>org.icepdf.pdf</groupId>
 			<artifactId>icepdf-viewer</artifactId>
 			<version>${icepdf.version}</version>
 			<scope>system</scope>
-			<systemPath>${basedir}/libs/icepdf-viewer.jar</systemPath>
+			<systemPath>${basedir}/libs/5.0.4/icepdf-viewer.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>org.icepdf.pdf</groupId>
 			<artifactId>levigo-jbig2-imageio</artifactId>
 			<version>${icepdf.version}</version>
 			<scope>system</scope>
-			<systemPath>${basedir}/libs/levigo-jbig2-imageio.jar</systemPath>
-		</dependency>
+			<systemPath>${basedir}/libs/5.0.4/levigo-jbig2-imageio.jar</systemPath>
+		</dependency> -->
 
 	</dependencies>
 

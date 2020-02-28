@@ -1,11 +1,11 @@
 package org.icepdf.spring.boot;
 
-import icepdf.cr;
-
 import java.lang.reflect.Field;
 
 import org.icepdf.core.application.ProductInfo;
 import org.icepdf.core.pobjects.Document;
+
+import icepdf.cr;
 
 public class MyDocument extends Document
 {
