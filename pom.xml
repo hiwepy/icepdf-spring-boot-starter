@@ -789,6 +789,11 @@
 			<systemPath>${basedir}/libs/5.0.4/levigo-jbig2-imageio.jar</systemPath>
 		</dependency> -->
 
+			<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 </project>
