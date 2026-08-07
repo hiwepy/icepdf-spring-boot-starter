@@ -13,7 +13,7 @@
     <groupId>io.github.easy4j</groupId>
     <artifactId>icepdf-spring-boot-starter</artifactId>
     <description>Spring Boot Starter For icepdf</description>
-    <version>3.2.x.20260527-SNAPSHOT</version>
+    <version>3.2.x.20260630-SNAPSHOT</version>
     <name>${project.groupId}:${project.artifactId}</name>
     <url>https://github.com/easy-4-java/${project.artifactId}</url>
     <packaging>jar</packaging>
@@ -411,6 +411,7 @@
     </profiles>
 
     <properties>
+        <java.version>17</java.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -863,7 +864,7 @@
             <scope>system</scope>
             <systemPath>${basedir}/libs/5.0.4/icepdf-core.jar</systemPath>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.icepdf.pdf/icepdf-extra -->
+        https://mvnrepository.com/artifact/org.icepdf.pdf/icepdf-extra
         <dependency>
             <groupId>org.icepdf.pdf</groupId>
             <artifactId>icepdf-extra</artifactId>
@@ -871,7 +872,7 @@
             <scope>system</scope>
             <systemPath>${basedir}/libs/5.0.4/icepdf-extra.jar</systemPath>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.icepdf.pdf/icepdf-pro-intl -->
+        https://mvnrepository.com/artifact/org.icepdf.pdf/icepdf-pro-intl
         <dependency>
             <groupId>org.icepdf.pdf</groupId>
             <artifactId>icepdf-pro-intl</artifactId>
@@ -879,7 +880,7 @@
             <scope>system</scope>
             <systemPath>${basedir}/libs/5.0.4/icepdf-pro-intl.jar</systemPath>
         </dependency> 
-        <!-- https://mvnrepository.com/artifact/org.icepdf.pdf/icepdf-pro -->
+        https://mvnrepository.com/artifact/org.icepdf.pdf/icepdf-pro
         <dependency>
             <groupId>org.icepdf.pdf</groupId>
             <artifactId>icepdf-pro</artifactId>
@@ -887,7 +888,7 @@
             <scope>system</scope>
             <systemPath>${basedir}/libs/5.0.4/icepdf-pro.jar</systemPath>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.icepdf.pdf/icepdf-viewer -->
+        https://mvnrepository.com/artifact/org.icepdf.pdf/icepdf-viewer
         <dependency>
             <groupId>org.icepdf.pdf</groupId>
             <artifactId>icepdf-viewer</artifactId>
@@ -895,7 +896,7 @@
             <scope>system</scope>
             <systemPath>${basedir}/libs/5.0.4/icepdf-viewer.jar</systemPath>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.icepdf.pdf/levigo-jbig2-imageio -->
+        https://mvnrepository.com/artifact/org.icepdf.pdf/levigo-jbig2-imageio
         <dependency>
             <groupId>org.icepdf.pdf</groupId>
             <artifactId>levigo-jbig2-imageio</artifactId>
