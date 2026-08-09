@@ -54,6 +54,9 @@ public class PdfToImages {
 		} catch (IOException e) {
 // TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+			e.printStackTrace();
 		}
 	}
 
@@ -66,7 +69,7 @@ public class PdfToImages {
 	 * @throws PDFSecurityException
 	 * @throws IOException
 	 */
-	public static void tranfer1(String filepath, float zoom) throws PDFException, PDFSecurityException, IOException {
+	public static void tranfer1(String filepath, float zoom) throws PDFException, PDFSecurityException, IOException, InterruptedException {
 // ICEpdf document class
 		Document document = null;
 		float rotation = 0f;
@@ -98,7 +101,7 @@ public class PdfToImages {
 	 * @throws PDFSecurityException
 	 * @throws IOException
 	 */
-	public static void tranfer(String filepath, float zoom) throws PDFException, PDFSecurityException, IOException {
+	public static void tranfer(String filepath, float zoom) throws PDFException, PDFSecurityException, IOException, InterruptedException {
 		// ICEpdf document class
 		Document document = null;
 		float rotation = 0f;
@@ -161,7 +164,7 @@ public class PdfToImages {
 	 * @throws IOException
 	 */
 	public static void tranferPer(Document document, float rotation, float zoom, String imagepath, int index)
-			throws PDFException, PDFSecurityException, IOException {
+			throws PDFException, PDFSecurityException, IOException, InterruptedException {
 		float scale = 1f;
 		Page page = document.getPageTree().getPage(index);
 		page.init();

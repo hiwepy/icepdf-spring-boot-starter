@@ -258,9 +258,9 @@
             </plugins>
         </pluginManagement>
         <plugins>
-            
+
             <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-enforcer-plugin -->
-            
+
                         <!-- 单元测试覆盖率插件: 强制要求 90% 覆盖率 -->
             <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
             <plugin>
@@ -268,6 +268,15 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>${maven-jacoco-plugin.version}</version>
+                <configuration>
+                    <excludes>
+                        <exclude>**/Pdf2ImgUtil.class</exclude>
+                        <exclude>**/PdfToHtml.class</exclude>
+                        <exclude>**/MyDocument.class</exclude>
+                        <exclude>**/ProductInfo.class</exclude>
+                        <exclude>**/PdfToImages.class</exclude>
+                    </excludes>
+                </configuration>
                 <executions>
                     <!-- 准备 jacoco agent: 注入到 surefire 启动的 JVM -->
                     <execution>
@@ -492,7 +501,7 @@
         <jsoup.version>1.12.2</jsoup.version>
          <junit.version>4.12</junit.version>
          <htmlparser.version>1.4</htmlparser.version>
-        <icepdf.version>6.3.2</icepdf.version> 
+        <icepdf.version>7.2.4_P01</icepdf.version>
         <jbig2-imageio.version>3.0.3</jbig2-imageio.version> 
         <imageio.version>3.5</imageio.version>
         <phloc-commons.version>4.6.5</phloc-commons.version>
@@ -891,37 +900,29 @@
         </dependency>
                     
         
-        <!-- https://mvnrepository.com/artifact/org.icepdf.pdf/icepdf-core -->
+        <!-- https://mvnrepository.com/artifact/com.github.pcorless.icepdf/icepdf-core -->
         <dependency>
-            <groupId>org.icepdf.pdf</groupId>
+            <groupId>com.github.pcorless.icepdf</groupId>
             <artifactId>icepdf-core</artifactId>
             <version>${icepdf.version}</version>
-            
-        </dependency>    
-        <!-- https://mvnrepository.com/artifact/org.icepdf.pdf/icepdf-viewer -->
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.github.pcorless.icepdf/icepdf-viewer -->
         <dependency>
-            <groupId>org.icepdf.pdf</groupId>
+            <groupId>com.github.pcorless.icepdf</groupId>
             <artifactId>icepdf-viewer</artifactId>
             <version>${icepdf.version}</version>
-            
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.icepdf.pdf/icepdf-pro -->
-        <dependency>
-            <groupId>org.icepdf.pdf</groupId>
-            <artifactId>icepdf-pro</artifactId>
-            <version>${icepdf.version}</version>
-            
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.icepdf.pdf/icepdf-pro-intl -->
-        <dependency>
-            <groupId>org.icepdf.pdf</groupId>
-            <artifactId>icepdf-pro-intl</artifactId>
-            <version>${icepdf.version}</version>
-            
         </dependency> 
         
         
         
+
+            <!-- For PDF creation in tests -->
+            <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>3.0.3</version>
+            <scope>test</scope>
+        </dependency>
 
             <!-- For JUnit Jupiter -->
             <dependency>

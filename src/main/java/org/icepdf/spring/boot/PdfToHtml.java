@@ -22,7 +22,7 @@ import org.icepdf.core.util.GraphicsRenderingHints;
 /**\n * Converter for transforming PDF documents to HTML format.\n *\n * @author [@Loong Wan](https://github.com/loong10k)\n * @since 1.0.0\n */
 public class PdfToHtml {
 
-	public static void pdf2Pic(String pdfPath, String path) throws IOException, PDFException, PDFSecurityException {
+	public static void pdf2Pic(String pdfPath, String path) throws IOException, PDFException, PDFSecurityException, InterruptedException {
 		
 		Document document = new Document();
 		document.setFile(pdfPath);
@@ -72,9 +72,14 @@ public class PdfToHtml {
 
 		for (int i = 0; i < pages; i++) {
 
-			image = (BufferedImage) document.getPageImage(i, GraphicsRenderingHints.PRINT, Page.BOUNDARY_TRIMBOX, 0f,
-					3.5f);
-			;
+			try {
+				image = (BufferedImage) document.getPageImage(i, GraphicsRenderingHints.PRINT, Page.BOUNDARY_TRIMBOX, 0f,
+						3.5f);
+			} catch (InterruptedException e) {
+				Thread.currentThread().interrupt();
+				e.printStackTrace();
+				continue;
+			}
 
 			rendImage = image;
 
