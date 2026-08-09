@@ -5,6 +5,7 @@ import java.lang.reflect.Field;
 import org.icepdf.core.application.ProductInfo;
 import org.icepdf.core.pobjects.Document;
 
+/**\n * Extended document class for ICEpdf with additional functionality.\n *\n * @author [@Loong Wan](https://github.com/loong10k)\n * @since 1.0.0\n */
 public class MyDocument extends Document {
 	
 	// 通过反射去掉水印文字资源，使其打印不出

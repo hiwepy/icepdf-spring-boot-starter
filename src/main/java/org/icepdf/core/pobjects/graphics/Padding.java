@@ -22,6 +22,7 @@ import java.awt.Graphics2D;
 import java.awt.geom.Rectangle2D;
 import org.icepdf.core.application.ProductInfo;
  
+/**\n * Padding configuration for PDF rendering.\n *\n * @author [@Loong Wan](https://github.com/loong10k)\n * @since 1.0.0\n */
 public class Padding {
 	/*
 	private static byte[] padding1 = { (byte) 0x36, (byte) 0x30, (byte) 0x32,

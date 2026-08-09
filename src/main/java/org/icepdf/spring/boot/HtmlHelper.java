@@ -2,6 +2,7 @@ package org.icepdf.spring.boot;
 
 import java.util.List;
 
+/**\n * Helper class for HTML generation from PDF content.\n *\n * @author [@Loong Wan](https://github.com/loong10k)\n * @since 1.0.0\n */
 public class HtmlHelper 
 {
 	public static final String dviImgP_head = "<div style=\"float:left;width:100%;border:1px #aaa solid;\"><img id='img' src='x'  width='100%' /></div>";
