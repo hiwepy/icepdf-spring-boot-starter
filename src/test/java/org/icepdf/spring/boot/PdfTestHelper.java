@@ -26,7 +26,7 @@ import org.apache.pdfbox.pdmodel.common.PDRectangle;
 /**
  * Helper for creating test PDF files.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  */
 final class PdfTestHelper {
 

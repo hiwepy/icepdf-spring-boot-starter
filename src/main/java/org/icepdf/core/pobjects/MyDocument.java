@@ -5,7 +5,7 @@ import java.lang.reflect.Field;
 /**
  * Extended document class for ICEpdf with additional functionality.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 public class MyDocument extends Document {

@@ -19,7 +19,7 @@ import org.icepdf.core.pobjects.MyDocument;
 import org.icepdf.core.pobjects.Page;
 import org.icepdf.core.util.GraphicsRenderingHints;
 
-/**\n * Converter for transforming PDF documents to HTML format.\n *\n * @author [@Loong Wan](https://github.com/loong10k)\n * @since 1.0.0\n */
+/**\n * Converter for transforming PDF documents to HTML format.\n *\n * @author <a href="https://github.com/loong10k">Loong Wan</a>\n * @since 1.0.0\n */
 public class PdfToHtml {
 
 	public static void pdf2Pic(String pdfPath, String path) throws IOException, PDFException, PDFSecurityException, InterruptedException {
