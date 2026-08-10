@@ -17,7 +17,7 @@ package org.icepdf.spring.boot;
 
 /**
  * TODO
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  */
 
 import java.awt.image.BufferedImage;
