@@ -21,6 +21,16 @@ import org.icepdf.core.util.GraphicsRenderingHints;
 
 /**\n * Converter for transforming PDF documents to HTML format.\n *\n * @author <a href="https://github.com/loong10k">Loong Wan</a>\n * @since 1.0.0\n */
 public class PdfToHtml {
+	/**
+	 * <p>Pdf2 pic.</p>
+	 * @param pdfPath the pdf path
+	 * @param path the path
+	 * @return the static void
+	 * @throws IOException if an error occurs
+	 * @throws PDFException if an error occurs
+	 * @throws PDFSecurityException if an error occurs
+	 * @throws InterruptedException if an error occurs
+	 */
 
 	public static void pdf2Pic(String pdfPath, String path) throws IOException, PDFException, PDFSecurityException, InterruptedException {
 		
@@ -47,6 +57,11 @@ public class PdfToHtml {
 		}
 		document.dispose();
 	}
+	/**
+	 * <p>Main.</p>
+	 * @param arguments the arguments
+	 * @return the static void
+	 */
 
 	public static void main(String[] arguments) {
 		String p = "d://w1.pdf";

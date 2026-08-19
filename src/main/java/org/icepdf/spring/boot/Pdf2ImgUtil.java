@@ -15,10 +15,6 @@
  */
 package org.icepdf.spring.boot;
 
-/**
- * TODO
- * @author <a href="https://github.com/loong10k">Loong Wan</a>
- */
 
 import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
@@ -28,7 +24,18 @@ import org.icepdf.core.pobjects.Document;
 import org.icepdf.core.pobjects.Page;
 import org.icepdf.core.util.GraphicsRenderingHints;
 
+/**
+ * <p>Utility class for Pdf2 Img operations.</p>
+ *
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public class Pdf2ImgUtil {
+	/**
+	 * <p>Main.</p>
+	 * @param args the args
+	 * @return the static void
+	 */
 	public static void main(String[] args){
 		String filePath="G:/BaiduYunDownload/ce.pdf";
 		Document document=new Document();

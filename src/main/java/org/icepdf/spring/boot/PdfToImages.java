@@ -36,11 +36,17 @@ import org.icepdf.core.util.GraphicsRenderingHints;
  * @FileName PdfToImages.java
  * @Description 转换pfd每一页或首页为jpg缩略图大图、小图
  **********************************************
+ * @since 1.0.0
  */
 public class PdfToImages {
 
 	public static final String FILETYPE_JPG = "jpg";
 	public static final String SUFF_IMAGE = "." + FILETYPE_JPG;
+	/**
+	 * <p>Main.</p>
+	 * @param args the args
+	 * @return the static void
+	 */
 
 	public static void main(String[] args) {
 		try {

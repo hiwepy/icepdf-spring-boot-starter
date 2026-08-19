@@ -15,6 +15,12 @@
  */
 package org.icepdf.core.application;
 
+/**
+ * <p>Product Info.</p>
+ *
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public class ProductInfo {
 	/**
      * The company that owns this product.
@@ -47,6 +53,10 @@ public class ProductInfo {
      * This is substitued automatically by subversion.
      */
     public static String REVISION = "49267";
+    /**
+     * <p>To string.</p>
+     * @return the string
+     */
  
     public String toString(){
         StringBuilder info = new StringBuilder();
@@ -67,6 +77,7 @@ public class ProductInfo {
         info.append( "\n" );
         return info.toString();
     }
+    /** Gets the version. */
  
     public String getVersion(){
         StringBuilder info = new StringBuilder();
@@ -75,6 +86,11 @@ public class ProductInfo {
         //info.append( RELEASE_TYPE );
         return info.toString();
     }
+    /**
+     * <p>Main.</p>
+     * @param args the args
+     * @return the static void
+     */
  
     public static void main(String[] args) {
         ProductInfo app = new ProductInfo();

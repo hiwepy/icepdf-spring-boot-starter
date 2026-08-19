@@ -28,6 +28,7 @@ public class HtmlHelper
 	public static final String whole_head = "<html><head></head><body>"+dviImgP_head +dviBtns ;
 	
 	public static final String whole_end = "</body></html>";
+	/** Gets the html. */
 	
 	public static String getHtml(List<String> imgs) 
 	{
